@@ -1,5 +1,5 @@
 {
-	"id": "830568e0c9b7053e67562eb6c26598ff",
+	"id": "cde849e306de949be892c56ea735b919",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.6.6",
 	"solcLongVersion": "0.6.6+commit.6c089d02",
@@ -12,7 +12,7 @@
 		},
 		"settings": {
 			"optimizer": {
-				"enabled": false,
+				"enabled": true,
 				"runs": 200
 			},
 			"outputSelection": {
@@ -80,7 +80,7 @@
 							"withdraw(uint256)": "2e1a7d4d"
 						}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/IWNativeRelayer.sol\":\"IWNativeRelayer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IWNativeRelayer.sol\":{\"keccak256\":\"0xd657b6fba48da307cf0999fdacead821148b3fde3537cccea0637252d6a23e74\",\"urls\":[\"bzz-raw://40ba35f81caa4ddde9ff023f4fcfad436d0d302f623ca9c222e0bd65412766d7\",\"dweb:/ipfs/QmQXvnthgLjvMP4uKzRtXxNGxLekMdWmUECFpvoGgrUxJv\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/IWNativeRelayer.sol\":\"IWNativeRelayer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/IWNativeRelayer.sol\":{\"keccak256\":\"0xd657b6fba48da307cf0999fdacead821148b3fde3537cccea0637252d6a23e74\",\"urls\":[\"bzz-raw://40ba35f81caa4ddde9ff023f4fcfad436d0d302f623ca9c222e0bd65412766d7\",\"dweb:/ipfs/QmQXvnthgLjvMP4uKzRtXxNGxLekMdWmUECFpvoGgrUxJv\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [],
 						"types": null

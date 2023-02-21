@@ -42,17 +42,17 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"contracts/SafeToken.sol": {
-			"keccak256": "0x801fb88c63a93430cab925bf61e29ef4a5ded08a1cf845f625d8f39d6b57eae2",
+			"keccak256": "0x21190a1af59cba0e9f85aea51d1d487f51c45b324029cabf7b572943f3d9b9a0",
 			"urls": [
-				"bzz-raw://59829b956cf2f2cd40bb9a4e017ae8eaac059763cf33efc90529b438ff54b997",
-				"dweb:/ipfs/QmTupei3RC2MVrtwXhu3DLRNDR6zNsDLCtPJ36ChEEjeaK"
+				"bzz-raw://26ee9f3a0206c6ad2e7501554394b0fb33ff4dd3c5504873777bb52f97c8f9f1",
+				"dweb:/ipfs/QmNuoiaL3YFSufgoyFYxbK7praMZUuz8g9VG5YjpWEuv8u"
 			]
 		}
 	},
