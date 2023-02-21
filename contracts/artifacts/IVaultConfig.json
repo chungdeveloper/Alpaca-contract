@@ -1,0 +1,494 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"acceptDebt(address)": "000237f0",
+			"approvedAddStrategies(address)": "238d19ed",
+			"getFairLaunchAddr()": "bfbbd53f",
+			"getInterestRate(uint256,uint256)": "c6dfa13f",
+			"getKillBps()": "28ae433e",
+			"getKillTreasuryBps()": "04df1f5e",
+			"getReservePoolBps()": "09956f66",
+			"getTreasuryAddr()": "044d6d6f",
+			"getWNativeRelayer()": "d1783fa8",
+			"getWrappedNativeAddr()": "ef3bac5e",
+			"isWorker(address)": "aa156645",
+			"isWorkerReserveConsistent(address)": "bb6a0e04",
+			"isWorkerStable(address)": "98cb0614",
+			"killFactor(address,uint256)": "13f6321b",
+			"killFactor(address,uint256,address)": "b1855f35",
+			"minDebtSize()": "e1ed4286",
+			"rawKillFactor(address,uint256)": "4f69476a",
+			"rawKillFactor(address,uint256,address)": "4f467b4e",
+			"whitelistedCallers(address)": "ffc97ce9",
+			"whitelistedLiquidators(address)": "d9ed3def",
+			"workFactor(address,uint256)": "ad58e573",
+			"workFactor(address,uint256,address)": "16ed6a43"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				}
+			],
+			"name": "acceptDebt",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "addStrats",
+					"type": "address"
+				}
+			],
+			"name": "approvedAddStrategies",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getFairLaunchAddr",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "floating",
+					"type": "uint256"
+				}
+			],
+			"name": "getInterestRate",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getKillBps",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getKillTreasuryBps",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getReservePoolBps",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getTreasuryAddr",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getWNativeRelayer",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getWrappedNativeAddr",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				}
+			],
+			"name": "isWorker",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				}
+			],
+			"name": "isWorkerReserveConsistent",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				}
+			],
+			"name": "isWorkerStable",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				}
+			],
+			"name": "killFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "positionOwner",
+					"type": "address"
+				}
+			],
+			"name": "killFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "minDebtSize",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "positionOwner",
+					"type": "address"
+				}
+			],
+			"name": "rawKillFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				}
+			],
+			"name": "rawKillFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "caller",
+					"type": "address"
+				}
+			],
+			"name": "whitelistedCallers",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "caller",
+					"type": "address"
+				}
+			],
+			"name": "whitelistedLiquidators",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "positionOwner",
+					"type": "address"
+				}
+			],
+			"name": "workFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "worker",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "debt",
+					"type": "uint256"
+				}
+			],
+			"name": "workFactor",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.6.6+commit.6c089d02"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Context.sol": "ContextUpgradeSafe"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Context.sol": {
+			"keccak256": "0xea42d2e25ad51ffa0cd6ed950818aa8144f1260d2491ca5139a1e07469af65a3",
+			"urls": [
+				"bzz-raw://6b77019544065ff2f4ed46a94ea3decdc6101e526c2f7f2f03f3a20eda60edcb",
+				"dweb:/ipfs/QmThtEStRy6TqTRkJiU2hyTLxHs5y1SCuRSXs3tkrpkYxw"
+			]
+		},
+		"contracts/Initializable.sol": {
+			"keccak256": "0x62188c77f79483af23e66038f5dce8496001dbd63017dc2c41d8a9bb801133f0",
+			"urls": [
+				"bzz-raw://8fba6162c8efb1f9361b5274809d5440191e9800e9aea5e1cb43ef0f9d14d8c1",
+				"dweb:/ipfs/Qmb8d192osS5hwkxTZEZcTmhGJxPbHFa8EZxVJxAsjWkEN"
+			]
+		}
+	},
+	"version": 1
+}

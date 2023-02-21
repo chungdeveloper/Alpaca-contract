@@ -1,0 +1,218 @@
+{
+	"compiler": {
+		"version": "0.6.6+commit.6c089d02"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "baseToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "farmingToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "health",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "liquidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lpToken",
+				"outputs": [
+					{
+						"internalType": "contract IPancakePair",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reinvest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "reinvestor",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "isOk",
+						"type": "bool"
+					}
+				],
+				"name": "setReinvestorOk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "strats",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "isOk",
+						"type": "bool"
+					}
+				],
+				"name": "setStrategyOk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "debt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "work",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"baseToken()": {
+					"details": "Base Token that worker is working on"
+				},
+				"farmingToken()": {
+					"details": "Farming Token that worker is working on"
+				},
+				"health(uint256)": {
+					"details": "Return the amount of wei to get back if we are to liquidate the position."
+				},
+				"liquidate(uint256)": {
+					"details": "Liquidate the given position to token. Send all token back to its Vault."
+				},
+				"lpToken()": {
+					"details": "LP token holds by worker"
+				},
+				"reinvest()": {
+					"details": "Re-invest whatever the worker is working on."
+				},
+				"setReinvestorOk(address[],bool)": {
+					"details": "Set address that can be reinvest"
+				},
+				"setStrategyOk(address[],bool)": {
+					"details": "SetStretegy that be able to executed by the worker."
+				},
+				"work(uint256,address,uint256,bytes)": {
+					"details": "Work on a (potentially new) position. Optionally send token back to Vault."
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IWorker.sol": "IWorker"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IPancakePair.sol": {
+			"keccak256": "0xc942e5a3d2b6f7aad2f25c88b66869ff649290397d1d711ad9d2713b1245de1e",
+			"urls": [
+				"bzz-raw://b3afb9cc03faf927560e70cbc434775610a8ea09115b0734928f0cf1681e0174",
+				"dweb:/ipfs/QmT5xNphJnPU7vbuavoy6TLyWWaVwuLQUxVFTLo9kKYYZz"
+			]
+		},
+		"contracts/IWorker.sol": {
+			"keccak256": "0x6793f6dac8b07fe27071f4afb670fcc1b19f32592fa94a6a67cae98bd6a7dc2b",
+			"urls": [
+				"bzz-raw://3abe6c365bd21e871488c183b78604f7e021e5946c5839b60a85e92449d41e03",
+				"dweb:/ipfs/QmbPsWtMdspMjn2mPacoNCVu4vT7p1QrzjxNQvQmgiPeHG"
+			]
+		}
+	},
+	"version": 1
+}

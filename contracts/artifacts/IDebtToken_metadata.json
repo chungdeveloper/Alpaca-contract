@@ -1,0 +1,95 @@
+{
+	"compiler": {
+		"version": "0.6.6+commit.6c089d02"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_okHolders",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isOk",
+						"type": "bool"
+					}
+				],
+				"name": "setOkHolders",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IDebtToken.sol": "IDebtToken"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IDebtToken.sol": {
+			"keccak256": "0x7b455e88222ac3f734d9e4832bb116147ef69c27dbc668113e6c7c3f73024f15",
+			"urls": [
+				"bzz-raw://af46f3958010a2b5e5fff0a000501442b32ad5ba292fd0d7cb013900f3132548",
+				"dweb:/ipfs/QmY1tAXy7pXJaPavdnRLUzabzFdr8GVSoQj7dkuqgBex72"
+			]
+		}
+	},
+	"version": 1
+}
