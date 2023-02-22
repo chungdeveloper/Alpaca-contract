@@ -1,5 +1,5 @@
 {
-	"id": "dfc519000a99bf9d43f6082e3c91fd83",
+	"id": "7eb584617dfc72dfe99e1ed50793d24a",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.6.6",
 	"solcLongVersion": "0.6.6+commit.6c089d02",
@@ -12,7 +12,7 @@
 		},
 		"settings": {
 			"optimizer": {
-				"enabled": false,
+				"enabled": true,
 				"runs": 200
 			},
 			"outputSelection": {
@@ -48,18 +48,18 @@
 						"title": "Initializable "
 					},
 					"evm": {
-						"assembly": "    /* \"contracts/Initializable.sol\":672:2075  contract Initializable {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n    /* \"--CODEGEN--\":5:14   */\n  dup1\n    /* \"--CODEGEN--\":2:4   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":27:28   */\n  0x00\n    /* \"--CODEGEN--\":24:25   */\n  dup1\n    /* \"--CODEGEN--\":17:29   */\n  revert\n    /* \"--CODEGEN--\":2:4   */\ntag_1:\n    /* \"contracts/Initializable.sol\":672:2075  contract Initializable {\r... */\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Initializable.sol\":672:2075  contract Initializable {\r... */\n      mstore(0x40, 0x80)\n        /* \"--CODEGEN--\":12:13   */\n      0x00\n        /* \"--CODEGEN--\":9:10   */\n      dup1\n        /* \"--CODEGEN--\":2:14   */\n      revert\n\n    auxdata: 0xa26469706673582212207685a45efcb594f9e8104e03edf297339c4023d4b88428ca0fd5fadba8a77d0364736f6c63430006060033\n}\n",
+						"assembly": "    /* \"contracts/Initializable.sol\":672:2075  contract Initializable {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n    /* \"--CODEGEN--\":5:14   */\n  dup1\n    /* \"--CODEGEN--\":2:4   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":27:28   */\n  0x00\n    /* \"--CODEGEN--\":24:25   */\n  dup1\n    /* \"--CODEGEN--\":17:29   */\n  revert\n    /* \"--CODEGEN--\":2:4   */\ntag_1:\n    /* \"contracts/Initializable.sol\":672:2075  contract Initializable {\r... */\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Initializable.sol\":672:2075  contract Initializable {\r... */\n      mstore(0x40, 0x80)\n        /* \"--CODEGEN--\":12:13   */\n      0x00\n        /* \"--CODEGEN--\":9:10   */\n      dup1\n        /* \"--CODEGEN--\":2:14   */\n      revert\n\n    auxdata: 0xa2646970667358221220e252245bdc9d5b62d501c5e05b2d48570fc5aeaed9dcc04cdfd44194811e621d64736f6c63430006060033\n}\n",
 						"bytecode": {
 							"linkReferences": {},
-							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212207685a45efcb594f9e8104e03edf297339c4023d4b88428ca0fd5fadba8a77d0364736f6c63430006060033",
-							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH23 0x85A45EFCB594F9E8104E03EDF297339C4023D4B88428CA 0xF 0xD5 STATICCALL 0xDB 0xA8 0xA7 PUSH30 0x364736F6C63430006060033000000000000000000000000000000000000 ",
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220e252245bdc9d5b62d501c5e05b2d48570fc5aeaed9dcc04cdfd44194811e621d64736f6c63430006060033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE2 MSTORE 0x24 JUMPDEST 0xDC SWAP14 JUMPDEST PUSH3 0xD501C5 0xE0 JUMPDEST 0x2D 0x48 JUMPI 0xF 0xC5 0xAE 0xAE 0xD9 0xDC 0xC0 0x4C 0xDF 0xD4 COINBASE SWAP5 DUP2 0x1E PUSH3 0x1D6473 PUSH16 0x6C634300060600330000000000000000 ",
 							"sourceMap": "672:1403:0:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;672:1403:0;;;;;;;"
 						},
 						"deployedBytecode": {
 							"immutableReferences": {},
 							"linkReferences": {},
-							"object": "6080604052600080fdfea26469706673582212207685a45efcb594f9e8104e03edf297339c4023d4b88428ca0fd5fadba8a77d0364736f6c63430006060033",
-							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH23 0x85A45EFCB594F9E8104E03EDF297339C4023D4B88428CA 0xF 0xD5 STATICCALL 0xDB 0xA8 0xA7 PUSH30 0x364736F6C63430006060033000000000000000000000000000000000000 ",
+							"object": "6080604052600080fdfea2646970667358221220e252245bdc9d5b62d501c5e05b2d48570fc5aeaed9dcc04cdfd44194811e621d64736f6c63430006060033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE2 MSTORE 0x24 JUMPDEST 0xDC SWAP14 JUMPDEST PUSH3 0xD501C5 0xE0 JUMPDEST 0x2D 0x48 JUMPI 0xF 0xC5 0xAE 0xAE 0xD9 0xDC 0xC0 0x4C 0xDF 0xD4 COINBASE SWAP5 DUP2 0x1E PUSH3 0x1D6473 PUSH16 0x6C634300060600330000000000000000 ",
 							"sourceMap": "672:1403:0:-:0;;;12:1:-1;9;2:12"
 						},
 						"gasEstimates": {
@@ -212,7 +212,7 @@
 							],
 							".data": {
 								"0": {
-									".auxdata": "a26469706673582212207685a45efcb594f9e8104e03edf297339c4023d4b88428ca0fd5fadba8a77d0364736f6c63430006060033",
+									".auxdata": "a2646970667358221220e252245bdc9d5b62d501c5e05b2d48570fc5aeaed9dcc04cdfd44194811e621d64736f6c63430006060033",
 									".code": [
 										{
 											"begin": 672,
@@ -259,7 +259,7 @@
 						},
 						"methodIdentifiers": {}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Helper contract to support initializer functions. To use it, replace the constructor with a function that has the `initializer` modifier. WARNING: Unlike constructors, initializer functions must be manually invoked. This applies both to deploying an Initializable contract, as well as extending an Initializable contract via inheritance. WARNING: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or ensure that all initializers are idempotent, because this is not dealt with automatically as with constructors.\",\"methods\":{},\"title\":\"Initializable \"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/Initializable.sol\":\"Initializable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Initializable.sol\":{\"keccak256\":\"0x62188c77f79483af23e66038f5dce8496001dbd63017dc2c41d8a9bb801133f0\",\"urls\":[\"bzz-raw://8fba6162c8efb1f9361b5274809d5440191e9800e9aea5e1cb43ef0f9d14d8c1\",\"dweb:/ipfs/Qmb8d192osS5hwkxTZEZcTmhGJxPbHFa8EZxVJxAsjWkEN\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Helper contract to support initializer functions. To use it, replace the constructor with a function that has the `initializer` modifier. WARNING: Unlike constructors, initializer functions must be manually invoked. This applies both to deploying an Initializable contract, as well as extending an Initializable contract via inheritance. WARNING: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or ensure that all initializers are idempotent, because this is not dealt with automatically as with constructors.\",\"methods\":{},\"title\":\"Initializable \"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/Initializable.sol\":\"Initializable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Initializable.sol\":{\"keccak256\":\"0x62188c77f79483af23e66038f5dce8496001dbd63017dc2c41d8a9bb801133f0\",\"urls\":[\"bzz-raw://8fba6162c8efb1f9361b5274809d5440191e9800e9aea5e1cb43ef0f9d14d8c1\",\"dweb:/ipfs/Qmb8d192osS5hwkxTZEZcTmhGJxPbHFa8EZxVJxAsjWkEN\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [
 							{

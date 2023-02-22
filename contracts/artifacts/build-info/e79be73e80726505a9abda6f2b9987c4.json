@@ -1,5 +1,5 @@
 {
-	"id": "b8782bfebe49d5592105273d9faa9fb0",
+	"id": "e79be73e80726505a9abda6f2b9987c4",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.6.6",
 	"solcLongVersion": "0.6.6+commit.6c089d02",
@@ -12,7 +12,7 @@
 		},
 		"settings": {
 			"optimizer": {
-				"enabled": false,
+				"enabled": true,
 				"runs": 200
 			},
 			"outputSelection": {
@@ -47,18 +47,18 @@
 						"methods": {}
 					},
 					"evm": {
-						"assembly": "    /* \"contracts/SafeMath.sol\":604:5326  library SafeMath {\r... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n    /* \"--CODEGEN--\":132:134   */\n  0x0b\n    /* \"--CODEGEN--\":166:173   */\n  dup3\n    /* \"--CODEGEN--\":155:164   */\n  dup3\n    /* \"--CODEGEN--\":146:153   */\n  dup3\n    /* \"--CODEGEN--\":137:174   */\n  codecopy\n    /* \"--CODEGEN--\":255:262   */\n  dup1\n    /* \"--CODEGEN--\":249:263   */\n  mload\n    /* \"--CODEGEN--\":246:247   */\n  0x00\n    /* \"--CODEGEN--\":241:264   */\n  byte\n    /* \"--CODEGEN--\":235:239   */\n  0x73\n    /* \"--CODEGEN--\":232:265   */\n  eq\n    /* \"--CODEGEN--\":222:224   */\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":269:278   */\n  invalid\n    /* \"--CODEGEN--\":222:224   */\ntag_1:\n    /* \"--CODEGEN--\":293:302   */\n  address\n    /* \"--CODEGEN--\":290:291   */\n  0x00\n    /* \"--CODEGEN--\":283:303   */\n  mstore\n    /* \"--CODEGEN--\":323:327   */\n  0x73\n    /* \"--CODEGEN--\":314:321   */\n  dup2\n    /* \"--CODEGEN--\":306:328   */\n  mstore8\n    /* \"--CODEGEN--\":347:354   */\n  dup3\n    /* \"--CODEGEN--\":338:345   */\n  dup2\n    /* \"--CODEGEN--\":331:355   */\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/SafeMath.sol\":604:5326  library SafeMath {\r... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n        /* \"--CODEGEN--\":12:13   */\n      0x00\n        /* \"--CODEGEN--\":9:10   */\n      dup1\n        /* \"--CODEGEN--\":2:14   */\n      revert\n\n    auxdata: 0xa26469706673582212205194c169e3fa145bb3e8f690f6fc45febbf43fd384770c264f82834af37067a264736f6c63430006060033\n}\n",
+						"assembly": "    /* \"contracts/SafeMath.sol\":604:5326  library SafeMath {\r... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n    /* \"--CODEGEN--\":132:134   */\n  0x0b\n    /* \"--CODEGEN--\":166:173   */\n  dup3\n    /* \"--CODEGEN--\":155:164   */\n  dup3\n    /* \"--CODEGEN--\":146:153   */\n  dup3\n    /* \"--CODEGEN--\":137:174   */\n  codecopy\n    /* \"--CODEGEN--\":255:262   */\n  dup1\n    /* \"--CODEGEN--\":249:263   */\n  mload\n    /* \"--CODEGEN--\":246:247   */\n  0x00\n    /* \"--CODEGEN--\":241:264   */\n  byte\n    /* \"--CODEGEN--\":235:239   */\n  0x73\n    /* \"--CODEGEN--\":232:265   */\n  eq\n    /* \"--CODEGEN--\":222:224   */\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":269:278   */\n  invalid\n    /* \"--CODEGEN--\":222:224   */\ntag_1:\n    /* \"--CODEGEN--\":293:302   */\n  address\n    /* \"--CODEGEN--\":290:291   */\n  0x00\n    /* \"--CODEGEN--\":283:303   */\n  mstore\n    /* \"--CODEGEN--\":323:327   */\n  0x73\n    /* \"--CODEGEN--\":314:321   */\n  dup2\n    /* \"--CODEGEN--\":306:328   */\n  mstore8\n    /* \"--CODEGEN--\":347:354   */\n  dup3\n    /* \"--CODEGEN--\":338:345   */\n  dup2\n    /* \"--CODEGEN--\":331:355   */\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/SafeMath.sol\":604:5326  library SafeMath {\r... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n        /* \"--CODEGEN--\":12:13   */\n      0x00\n        /* \"--CODEGEN--\":9:10   */\n      dup1\n        /* \"--CODEGEN--\":2:14   */\n      revert\n\n    auxdata: 0xa264697066735822122028155f76a4611034ae28e7b4413abe856da55ae9c2f1e1c0951d38b3e739215b64736f6c63430006060033\n}\n",
 						"bytecode": {
 							"linkReferences": {},
-							"object": "60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212205194c169e3fa145bb3e8f690f6fc45febbf43fd384770c264f82834af37067a264736f6c63430006060033",
-							"opcodes": "PUSH1 0x56 PUSH1 0x23 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x16 JUMPI INVALID JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MLOAD SWAP5 0xC1 PUSH10 0xE3FA145BB3E8F690F6FC GASLIMIT INVALID 0xBB DELEGATECALL EXTCODEHASH 0xD3 DUP5 PUSH24 0xC264F82834AF37067A264736F6C63430006060033000000 ",
+							"object": "60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122028155f76a4611034ae28e7b4413abe856da55ae9c2f1e1c0951d38b3e739215b64736f6c63430006060033",
+							"opcodes": "PUSH1 0x56 PUSH1 0x23 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x16 JUMPI INVALID JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x28 ISZERO 0x5F PUSH23 0xA4611034AE28E7B4413ABE856DA55AE9C2F1E1C0951D38 0xB3 0xE7 CODECOPY 0x21 JUMPDEST PUSH5 0x736F6C6343 STOP MOD MOD STOP CALLER ",
 							"sourceMap": "604:4722:0:-:0;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24"
 						},
 						"deployedBytecode": {
 							"immutableReferences": {},
 							"linkReferences": {},
-							"object": "73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212205194c169e3fa145bb3e8f690f6fc45febbf43fd384770c264f82834af37067a264736f6c63430006060033",
-							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MLOAD SWAP5 0xC1 PUSH10 0xE3FA145BB3E8F690F6FC GASLIMIT INVALID 0xBB DELEGATECALL EXTCODEHASH 0xD3 DUP5 PUSH24 0xC264F82834AF37067A264736F6C63430006060033000000 ",
+							"object": "73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122028155f76a4611034ae28e7b4413abe856da55ae9c2f1e1c0951d38b3e739215b64736f6c63430006060033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x28 ISZERO 0x5F PUSH23 0xA4611034AE28E7B4413ABE856DA55AE9C2F1E1C0951D38 0xB3 0xE7 CODECOPY 0x21 JUMPDEST PUSH5 0x736F6C6343 STOP MOD MOD STOP CALLER ",
 							"sourceMap": "604:4722:0:-:0;;;;;;12:1:-1;9;2:12"
 						},
 						"gasEstimates": {
@@ -254,7 +254,7 @@
 							],
 							".data": {
 								"0": {
-									".auxdata": "a26469706673582212205194c169e3fa145bb3e8f690f6fc45febbf43fd384770c264f82834af37067a264736f6c63430006060033",
+									".auxdata": "a264697066735822122028155f76a4611034ae28e7b4413abe856da55ae9c2f1e1c0951d38b3e739215b64736f6c63430006060033",
 									".code": [
 										{
 											"begin": 604,
@@ -319,7 +319,7 @@
 						},
 						"methodIdentifiers": {}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Wrappers over Solidity's arithmetic operations with added overflow checks.  * Arithmetic operations in Solidity wrap on overflow. This can easily result in bugs, because programmers usually assume that an overflow raises an error, which is the standard behavior in high level programming languages. `SafeMath` restores this intuition by reverting the transaction when an operation overflows.  * Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/SafeMath.sol\":\"SafeMath\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SafeMath.sol\":{\"keccak256\":\"0x830895a87244cc85a754d6fb4441af5480ce74789105f25790a2ea50fa39b9a9\",\"urls\":[\"bzz-raw://fde3d2b90cdd04c78c6690ef6d1306a322c2172727ac63be925779d26107e286\",\"dweb:/ipfs/QmT3GFDkWHYUL5FeDLjEE8guR269KUiDGHsfh6LEdjZG3Z\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Wrappers over Solidity's arithmetic operations with added overflow checks.  * Arithmetic operations in Solidity wrap on overflow. This can easily result in bugs, because programmers usually assume that an overflow raises an error, which is the standard behavior in high level programming languages. `SafeMath` restores this intuition by reverting the transaction when an operation overflows.  * Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/SafeMath.sol\":\"SafeMath\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SafeMath.sol\":{\"keccak256\":\"0x830895a87244cc85a754d6fb4441af5480ce74789105f25790a2ea50fa39b9a9\",\"urls\":[\"bzz-raw://fde3d2b90cdd04c78c6690ef6d1306a322c2172727ac63be925779d26107e286\",\"dweb:/ipfs/QmT3GFDkWHYUL5FeDLjEE8guR269KUiDGHsfh6LEdjZG3Z\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [],
 						"types": null

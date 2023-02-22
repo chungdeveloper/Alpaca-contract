@@ -193,17 +193,17 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"contracts/IPancakePair.sol": {
-			"keccak256": "0xc942e5a3d2b6f7aad2f25c88b66869ff649290397d1d711ad9d2713b1245de1e",
+			"keccak256": "0x4ca1b5cc00a79fe28f879e6854b84c0877198fba06cb3fb3366a27059a1cfc31",
 			"urls": [
-				"bzz-raw://b3afb9cc03faf927560e70cbc434775610a8ea09115b0734928f0cf1681e0174",
-				"dweb:/ipfs/QmT5xNphJnPU7vbuavoy6TLyWWaVwuLQUxVFTLo9kKYYZz"
+				"bzz-raw://e55d5ccb8832621fadd9c4e519346f1da96091f1e5b0e7dfd14deef2f2deac30",
+				"dweb:/ipfs/Qmd8KgD6PToic6h2oGA3oQUU8NAK4vC2mQiQdG4exxVDdX"
 			]
 		},
 		"contracts/IWorker.sol": {

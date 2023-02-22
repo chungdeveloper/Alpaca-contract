@@ -1,0 +1,1251 @@
+{
+	"compiler": {
+		"version": "0.6.6+commit.6c089d02"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "healthBefore",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "healthAfter",
+						"type": "uint256"
+					}
+				],
+				"name": "AddCollateral",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "debtShare",
+						"type": "uint256"
+					}
+				],
+				"name": "AddDebt",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "killer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "posVal",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "debt",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prize",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "left",
+						"type": "uint256"
+					}
+				],
+				"name": "Kill",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "debtShare",
+						"type": "uint256"
+					}
+				],
+				"name": "RemoveDebt",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "loan",
+						"type": "uint256"
+					}
+				],
+				"name": "Work",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "POSITION_ID",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "STRATEGY",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_IN_EXEC_LOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "goRogue",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "addCollateral",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "config",
+				"outputs": [
+					{
+						"internalType": "contract IVaultConfig",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "debtShare",
+						"type": "uint256"
+					}
+				],
+				"name": "debtShareToVal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "debtToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "debtVal",
+						"type": "uint256"
+					}
+				],
+				"name": "debtValToShare",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "subtractedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "decreaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountToken",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fairLaunchPoolId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IVaultConfig",
+						"name": "_config",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "_debtToken",
+						"type": "address"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "kill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastAccrueTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextPositionID",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "pendingInterest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "positionInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "positions",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "worker",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "debtShare",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "reduceReserve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "targetedToken",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "requestFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reservePool",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_poolId",
+						"type": "uint256"
+					}
+				],
+				"name": "setFairLaunchPoolId",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IVaultConfig",
+						"name": "_config",
+						"type": "address"
+					}
+				],
+				"name": "updateConfig",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vaultDebtShare",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vaultDebtVal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "share",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawReserve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "worker",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "principalAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "borrowAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxReturn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "work",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"addCollateral(uint256,uint256,bool,bytes)": {
+					"details": "addCollateral to the given position.",
+					"params": {
+						"amount": "The amount of BTOKEN to be added to the position",
+						"data": "The calldata to pass along to the worker for more working context.",
+						"goRogue": "If on skip worker stability check, else only check reserve consistency.",
+						"id": "The ID of the position to add collaterals."
+					}
+				},
+				"allowance(address,address)": {
+					"details": "See {IERC20-allowance}."
+				},
+				"approve(address,uint256)": {
+					"details": "See {IERC20-approve}.      * Requirements:      * - `spender` cannot be the zero address."
+				},
+				"balanceOf(address)": {
+					"details": "See {IERC20-balanceOf}."
+				},
+				"debtShareToVal(uint256)": {
+					"details": "Return the Token debt value given the debt share. Be careful of unaccrued interests.",
+					"params": {
+						"debtShare": "The debt share to be converted."
+					}
+				},
+				"debtValToShare(uint256)": {
+					"details": "Return the debt share for the given debt value. Be careful of unaccrued interests.",
+					"params": {
+						"debtVal": "The debt value to be converted."
+					}
+				},
+				"decimals()": {
+					"details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`).      * Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is called.      * NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
+				},
+				"decreaseAllowance(address,uint256)": {
+					"details": "Atomically decreases the allowance granted to `spender` by the caller.      * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.      * Emits an {Approval} event indicating the updated allowance.      * Requirements:      * - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`."
+				},
+				"deposit(uint256)": {
+					"details": "Add more token to the lending pool. Hope to get some good returns."
+				},
+				"increaseAllowance(address,uint256)": {
+					"details": "Atomically increases the allowance granted to `spender` by the caller.      * This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}.      * Emits an {Approval} event indicating the updated allowance.      * Requirements:      * - `spender` cannot be the zero address."
+				},
+				"kill(uint256)": {
+					"details": "Kill the given to the position. Liquidate it immediately if killFactor condition is met.",
+					"params": {
+						"id": "The position ID to be killed."
+					}
+				},
+				"name()": {
+					"details": "Returns the name of the token."
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"pendingInterest(uint256)": {
+					"details": "Return the pending interest that will be accrued in the next call.",
+					"params": {
+						"value": "Balance value to subtract off address(this).balance when called from payable functions."
+					}
+				},
+				"positionInfo(uint256)": {
+					"details": "Return Token value and debt of the given position. Be careful of unaccrued interests.",
+					"params": {
+						"id": "The position ID to query."
+					}
+				},
+				"reduceReserve(uint256)": {
+					"details": "Reduce BaseToken reserve, effectively giving them to the depositors.",
+					"params": {
+						"value": "The number of BaseToken reserve to reduce."
+					}
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.      * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"requestFunds(address,uint256)": {
+					"details": "Request Funds from user through Vault"
+				},
+				"symbol()": {
+					"details": "Returns the symbol of the token, usually a shorter version of the name."
+				},
+				"totalSupply()": {
+					"details": "See {IERC20-totalSupply}."
+				},
+				"totalToken()": {
+					"details": "Return the total token entitled to the token holders. Be careful of unaccrued interests."
+				},
+				"transfer(address,uint256)": {
+					"details": "See {IERC20-transfer}.      * Requirements:      * - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "See {IERC20-transferFrom}.      * Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20};      * Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"updateConfig(address)": {
+					"details": "Update bank configuration to a new address. Must only be called by owner.",
+					"params": {
+						"_config": "The new configurator address."
+					}
+				},
+				"withdraw(uint256)": {
+					"details": "Withdraw token from the lending and burning ibToken."
+				},
+				"withdrawReserve(address,uint256)": {
+					"details": "Withdraw BaseToken reserve for underwater positions to the given address.",
+					"params": {
+						"to": "The address to transfer BaseToken to.",
+						"value": "The number of BaseToken tokens to withdraw. Must not exceed `reservePool`."
+					}
+				},
+				"work(uint256,address,uint256,uint256,uint256,bytes)": {
+					"details": "Create a new farming position to unlock your yield farming potential.",
+					"params": {
+						"borrowAmount": "The amount of Token to borrow from the pool.",
+						"data": "The calldata to pass along to the worker for more working context.",
+						"id": "The ID of the position to unlock the earning. Use ZERO for new position.",
+						"maxReturn": "The max amount of Token to return to the pool.",
+						"principalAmount": "The anout of Token to supply by user.",
+						"worker": "The address of the authorized worker to work for this position."
+					}
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Vault.sol": "Vault"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Address.sol": {
+			"keccak256": "0x401622b0f86e466dc4fba6226047550bafa1b2760a804310673d961e34616130",
+			"urls": [
+				"bzz-raw://6d0c83c6f34b01ce5b41a562061b7f54035b079424696a8c973347631ff5b317",
+				"dweb:/ipfs/Qmc8Yonc8bBcrw1aj1LidPdvH2AJ5tyRwoMG58MZnpkMoc"
+			]
+		},
+		"contracts/Context.sol": {
+			"keccak256": "0xea42d2e25ad51ffa0cd6ed950818aa8144f1260d2491ca5139a1e07469af65a3",
+			"urls": [
+				"bzz-raw://6b77019544065ff2f4ed46a94ea3decdc6101e526c2f7f2f03f3a20eda60edcb",
+				"dweb:/ipfs/QmThtEStRy6TqTRkJiU2hyTLxHs5y1SCuRSXs3tkrpkYxw"
+			]
+		},
+		"contracts/ERC20.sol": {
+			"keccak256": "0x6c6fc63fdb95b19f241a2c9aaff433239e4ee01e181b9b3d0948daec8482b3ae",
+			"urls": [
+				"bzz-raw://0ccfe0b61405147910751247a064822af9b73dd3f796ebc723c2f0bbe91f75ba",
+				"dweb:/ipfs/QmdKs2XuoYk2vsBp4aATS7btGUNQB5UjjkoycZPZpn2tR3"
+			]
+		},
+		"contracts/IDebtToken.sol": {
+			"keccak256": "0x7b455e88222ac3f734d9e4832bb116147ef69c27dbc668113e6c7c3f73024f15",
+			"urls": [
+				"bzz-raw://af46f3958010a2b5e5fff0a000501442b32ad5ba292fd0d7cb013900f3132548",
+				"dweb:/ipfs/QmY1tAXy7pXJaPavdnRLUzabzFdr8GVSoQj7dkuqgBex72"
+			]
+		},
+		"contracts/IERC20.sol": {
+			"keccak256": "0xd02276add7929bf76676655f6b8f56f5197cdb6d90abff8e66fee4225ce40e75",
+			"urls": [
+				"bzz-raw://78afe693d6872f10ebbcc297b1858b9d70bbb3541c01ec353c30638d5c5e7aec",
+				"dweb:/ipfs/QmWnkMEANoWgfQ1usraBnQoRMKBVqywjCECbCU87ZojUBU"
+			]
+		},
+		"contracts/IFairLaunch.sol": {
+			"keccak256": "0x2db9a73676c5518d46284974406fcac55f62fe20dc728caf0624c5baba8f32a2",
+			"urls": [
+				"bzz-raw://2f54f5f23d80e89256e82dfe181ef94233ffc730662b3a5054f7f02145e34e1e",
+				"dweb:/ipfs/QmevUNoZ9btn1gNvPkJKsCqavaLpxk9nL8Xo2Wv1ciVZh2"
+			]
+		},
+		"contracts/IPancakePair.sol": {
+			"keccak256": "0x4ca1b5cc00a79fe28f879e6854b84c0877198fba06cb3fb3366a27059a1cfc31",
+			"urls": [
+				"bzz-raw://e55d5ccb8832621fadd9c4e519346f1da96091f1e5b0e7dfd14deef2f2deac30",
+				"dweb:/ipfs/Qmd8KgD6PToic6h2oGA3oQUU8NAK4vC2mQiQdG4exxVDdX"
+			]
+		},
+		"contracts/IVault.sol": {
+			"keccak256": "0x0a47c6d628c749cd0c1655c582c72098171e2d8c30ef47af3b8547ba9d39affd",
+			"urls": [
+				"bzz-raw://34d4ad316c5bc8da245ebeb8ec43de24a45090fd03f6b24f38ac7c041e801a06",
+				"dweb:/ipfs/QmdNqSx6svJeRdC8VRRxjtyibVVyHZ28ZhMbA1dVm8jHEM"
+			]
+		},
+		"contracts/IVaultConfig.sol": {
+			"keccak256": "0x68bcfdeb4e05c1a03df3c5f4326a76a85fd6dedec579a8ab7abce03ab527b1c4",
+			"urls": [
+				"bzz-raw://ab27002dca0c13f20216afc505c72819830c51d9e6b5b10dcaeab2a8770dee98",
+				"dweb:/ipfs/QmNjFaQDtKKgw1oPmhfBMUcpQYjaxBRr19JZUkxsgtjqdM"
+			]
+		},
+		"contracts/IWETH.sol": {
+			"keccak256": "0xa2e03a4c4e089fc5b2e40c9fc779e70b36a240d1a989641a003d33cb9d122eae",
+			"urls": [
+				"bzz-raw://e389f7b3c3c3470797bf3f0a25fa6ac68a7d1499a565cdb602e701c7f019a0fa",
+				"dweb:/ipfs/QmXKnVZngEeyfRVZBgwqwgW7gA7tYQ8SEEQmf5GTt6ruby"
+			]
+		},
+		"contracts/IWNativeRelayer.sol": {
+			"keccak256": "0xd657b6fba48da307cf0999fdacead821148b3fde3537cccea0637252d6a23e74",
+			"urls": [
+				"bzz-raw://40ba35f81caa4ddde9ff023f4fcfad436d0d302f623ca9c222e0bd65412766d7",
+				"dweb:/ipfs/QmQXvnthgLjvMP4uKzRtXxNGxLekMdWmUECFpvoGgrUxJv"
+			]
+		},
+		"contracts/IWorker.sol": {
+			"keccak256": "0x6793f6dac8b07fe27071f4afb670fcc1b19f32592fa94a6a67cae98bd6a7dc2b",
+			"urls": [
+				"bzz-raw://3abe6c365bd21e871488c183b78604f7e021e5946c5839b60a85e92449d41e03",
+				"dweb:/ipfs/QmbPsWtMdspMjn2mPacoNCVu4vT7p1QrzjxNQvQmgiPeHG"
+			]
+		},
+		"contracts/Initializable.sol": {
+			"keccak256": "0x62188c77f79483af23e66038f5dce8496001dbd63017dc2c41d8a9bb801133f0",
+			"urls": [
+				"bzz-raw://8fba6162c8efb1f9361b5274809d5440191e9800e9aea5e1cb43ef0f9d14d8c1",
+				"dweb:/ipfs/Qmb8d192osS5hwkxTZEZcTmhGJxPbHFa8EZxVJxAsjWkEN"
+			]
+		},
+		"contracts/Math.sol": {
+			"keccak256": "0x446a5c94d6b153d8e9bcbbe3ebfc0b8b9020d6056dd0376250d712059db23461",
+			"urls": [
+				"bzz-raw://5414a8ee651f806f23c02ba5bd92eadb4eb9728724a02d7d732bd5fc63b965b6",
+				"dweb:/ipfs/QmQ5oxTUDmsML3hreqAwxRYcxfTqoDaxHEiAyy8iemSQQY"
+			]
+		},
+		"contracts/Ownable.sol": {
+			"keccak256": "0x5355dd549c496865f18357e6171e7c028dd5b9efd5d01ebf57d65997e54d509b",
+			"urls": [
+				"bzz-raw://5a82c67f784e3fc2feeb419ab7409a7018ec3bbb47d33000cbf392ac4174dac7",
+				"dweb:/ipfs/QmTnqFSguVUu9DFhTR9VtS7E9961E2WEm2u5YZLfuNuEX2"
+			]
+		},
+		"contracts/ReentrancyGuard.sol": {
+			"keccak256": "0xbe4997434798f9f895ff9f79f786c09ce37a40da3bac21638b6b2aa3e4ba0ee6",
+			"urls": [
+				"bzz-raw://aa15c11a4f708d29a19c855d842c7e775cae5ddd1d9cba279a7f39b91bdad878",
+				"dweb:/ipfs/QmbtcfjBgx7T7tvoyjcFsrKjJ7p7xixGA6Hg7yPm1qYw1q"
+			]
+		},
+		"contracts/SafeMath.sol": {
+			"keccak256": "0x830895a87244cc85a754d6fb4441af5480ce74789105f25790a2ea50fa39b9a9",
+			"urls": [
+				"bzz-raw://fde3d2b90cdd04c78c6690ef6d1306a322c2172727ac63be925779d26107e286",
+				"dweb:/ipfs/QmT3GFDkWHYUL5FeDLjEE8guR269KUiDGHsfh6LEdjZG3Z"
+			]
+		},
+		"contracts/SafeToken.sol": {
+			"keccak256": "0x21190a1af59cba0e9f85aea51d1d487f51c45b324029cabf7b572943f3d9b9a0",
+			"urls": [
+				"bzz-raw://26ee9f3a0206c6ad2e7501554394b0fb33ff4dd3c5504873777bb52f97c8f9f1",
+				"dweb:/ipfs/QmNuoiaL3YFSufgoyFYxbK7praMZUuz8g9VG5YjpWEuv8u"
+			]
+		},
+		"contracts/Vault.sol": {
+			"keccak256": "0xc181cbe1f2206d9275dc24b4ddc5070abe39820ab40736db2547fb03831b4813",
+			"urls": [
+				"bzz-raw://88bdf2b79cc3b44027c3589a0987bf34ecacbc1fdc989dcc7347dc789c5f064c",
+				"dweb:/ipfs/QmYKNn4TDZTaBWGrFami7tL39hXYAaQ9ZvoKGjijUtfBze"
+			]
+		}
+	},
+	"version": 1
+}
